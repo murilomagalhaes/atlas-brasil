@@ -1,0 +1,62 @@
+:root {
+    --green: green;
+    --yellow: #ffc425;
+    --blue: #5a66ff;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-light {
+    color: whitesmoke;
+}
+
+.text-green {
+    color: var(--green)
+}
+
+.text-blue {
+    color: var(--blue);
+}
+
+.text-yellow {
+    color: var(--yellow);
+}
+
+.border-light {
+    border-color: whitesmoke;
+}
+
+.border-green {
+    border-color: var(--green)
+}
+
+.border-blue {
+    border-color: var(--blue);
+}
+
+.border-yellow {
+    border-color: var(--yellow);
+}
+
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.bg-green {
+    background-color: var(--green)
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
+}
+
+.bg-light {
+    background-color: whitesmoke;
+}

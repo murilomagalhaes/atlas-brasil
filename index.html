@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atals - Brasil API</title>
+    <link rel="stylesheet" href="./styles/default.css">
+</head>
+
+<body>
+
+    <div class="bg-light padding-y-medium padding-x-medium">
+
+        <!-- Cabecalho -->
+        <header class="card shadow">
+            <div class="d-flex logo">
+
+                <div class="brazil-colors">
+                    <span class="bg-green"></span>
+                    <span class="bg-yellow"></span>
+                    <span class="bg-blue"></span>
+                    <span class="bg-white"></span>
+                </div>
+
+                <h1 class="margin-x text-green">Atlas - Brasil API</h1>
+            </div>
+            <hr />
+            <p>
+                Implementação da <a href="https://brasilapi.com.br/" target="_blank">Brasil API</a> para
+                disponibilização de
+                dados sobre empresas, bancos, documentos, e outras informações.
+            </p>
+        </header>
+
+        <!--Menu -->
+        <nav class="main-nav padding-top-medium">
+            <ul>
+                <li>
+                    <button id="btn_bancos" onclick="setCategoria('bancos')" class="shadow bg-blue text-light">
+                        Bancos
+                    </button>
+                </li>
+                <li>
+                    <button id="btn_ceps" onclick="setCategoria('ceps')" class="shadow bg-blue text-light">
+                        CEPs
+                    </button>
+                </li>
+                <li> <button id="btn_cnpj" onclick="setCategoria('cnpj')" class="shadow bg-blue text-light">
+                        CNPJ
+                    </button>
+                </li>
+                <li>
+                    <button id="btn_ddd" onclick="setCategoria('ddd')" class="shadow bg-blue text-light">
+                        DDD
+                    </button>
+                </li>
+                <li>
+                    <button id="btn_feriados" onclick="setCategoria('feriados')" class="shadow bg-blue text-light">
+                        Feriados
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section>
+            <h3 class="text-center" id="categoria_nenhuma">Selecione uma categoria para começar.</h3>
+
+            <!-- Bancos -->
+            <div id="categoria_bancos" class="categorias d-none">
+                <form name="bancos_form">
+                    <input type="number" step="1" min="0" name="param" class="w-50"
+                        placeholder="Código do banco (Ou deixe em branco prara ver todos os bancos)">
+                    <button class="bg-green shadow text-white">Pesquisar</button>
+                </form>
+
+                <div class="responsive-container">
+                    <table id="bancos_table">
+                    </table>
+                </div>
+            </div>
+
+            <!-- CEPs -->
+            <div id="categoria_ceps" class="categorias d-none">
+                <form name="ceps_form">
+                    <input type="number" step="1" min="0" name="param" class="w-50"
+                        placeholder="CEP sem pontos ou traços" required>
+                    <button class="bg-green shadow text-white">Pesquisar</button>
+                </form>
+
+                <div class="responsive-container">
+                    <table id="ceps_table">
+                    </table>
+                </div>
+            </div>
+
+            <!-- CNPJ -->
+            <div id="categoria_cnpj" class="categorias d-none">
+                <form name="cnpj_form">
+                    <input type="number" step="1" min="0" name="param" class="w-50"
+                        placeholder="CNPJ sem pontos ou traços" required>
+                    <button class="bg-green shadow text-white">Pesquisar</button>
+                </form>
+
+                <div class="responsive-container">
+                    <table id="cnpj_table">
+                    </table>
+                </div>
+            </div>
+
+            <!-- DDD -->
+            <div id="categoria_ddd" class="categorias d-none">
+                <form name="ddd_form">
+                    <input type="number" step="1" min="0" name="param" class="w-50" placeholder="DDD sem o zero"
+                        required>
+                    <button class="bg-green shadow text-white">Pesquisar</button>
+                </form>
+
+                <div class="responsive-container">
+                    <table id="ddd_table">
+                    </table>
+                </div>
+            </div>
+
+            <!-- Feriados -->
+            <div id="categoria_feriados" class="categorias d-none">
+                <form name="feriados_form">
+                    <input type="number" step="1" min="1970" name="param" class="w-50" placeholder="Ano" required>
+                    <button class="bg-green shadow text-white">Pesquisar</button>
+                </form>
+
+                <div class="responsive-container">
+                    <table id="feriados_table">
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script async src="./scripts/index.js"></script>
+</body>
+
+</html>
