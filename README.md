@@ -8,6 +8,8 @@ SPA desenvolvida como atividade do curso de Desenvolvimento WEB Full Stack da fa
 
 A itenção é aplicar a base das tecnologias CSS, JS para Frontend e consumo de API sem a utilização de frameworks ou bibliotecas de terceiros.
 
+Link para acesso: **[Atlas - Brasil API](https://atlas-brasil.vercel.app/)**
+
 <hr/>
 
 ### Screenshot:
